@@ -12,6 +12,8 @@
 
 5. Add a chat log or previous dialogue button?
 
+5. Pt2. Add a capybara logo for text (w/ animation?)
+
 6. Color/BG changing?
 
 7. Animations?

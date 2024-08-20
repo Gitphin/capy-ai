@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styles from './textinput.module.css';
 
-function TextInput({ placeholder, onSubmit }) {
+function TextInput({onSubmit }) {
 
     const handleTextSubmit = async (text) => {
     try {

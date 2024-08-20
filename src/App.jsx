@@ -4,7 +4,7 @@ import { useGLTF, PresentationControls, Stage } from "@react-three/drei";
 import TextInput from './textinput/TextInput';
 
 function Model(props) {
-  const { scene } = useGLTF("/capybara.glb");
+  const { scene } = useGLTF("/capyai3.glb");
   return <primitive object={scene} {...props} />;
 }
 
@@ -14,7 +14,7 @@ function App() {
       <Canvas
         dpr={[1, 2]}
         shadows
-        camera={{ fov: 60, position: [0, 160, 300]}}
+        camera={{ fov: 60, position: [50, 100, 700]}}
         style={{
           top: 0,
           left: 0,

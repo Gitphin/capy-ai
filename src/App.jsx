@@ -1,7 +1,9 @@
+import React, { useState } from 'react';
 import './App.css';
 import { Canvas } from "@react-three/fiber";
 import { useGLTF, PresentationControls, Stage } from "@react-three/drei";
 import TextInput from './textinput/TextInput';
+import TextOutput from './textoutput/TextOutput';
 
 function Model(props) {
   const { scene } = useGLTF("/capyai3.glb");
@@ -9,17 +11,24 @@ function Model(props) {
 }
 
 function App() {
+  const [text, setText] = useState('Hello, I am a capybara!');
+
+  const handleTextSubmit = (newText) => {
+    setText(newText);
+  };
+
   return (
     <>
+      <TextOutput text={text} />
       <Canvas
         dpr={[1, 2]}
         shadows
-        camera={{ fov: 60, position: [50, 100, 700]}}
+        camera={{ fov: 60, position: [50, 100, 700] }}
         style={{
           top: 0,
           left: 0,
           width: "100vw",
-          height: "145vh",
+          height: "100vh",
           overflow: "hidden",
           backgroundColor: "#202020"
         }}
@@ -38,7 +47,7 @@ function App() {
         transform: 'translateX(-50%)',
         zIndex: 1,
       }}>
-        <TextInput />
+      <TextInput onSubmit={handleTextSubmit} />
       </div>
     </>
   );

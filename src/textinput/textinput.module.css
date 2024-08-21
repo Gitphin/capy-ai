@@ -1,20 +1,24 @@
   form {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 25px;
+    width: 100%;
     gap: 10px;
-    height: 50px;
   }
   
   input {
     padding: 8px;
-    font-size: 16px;
+    width: 550px;
     height: 30px;
     border-radius: 8px;
     background-color: rgba(65, 190, 161, 0.521);
     border: 3px solid #59c0aa;
     outline: none;
-    max-width: 400px; /* Optional: Limit the width of the text input */
-    width: 120%;
+    font-family: 'Gothic A1', sans-serif;
+    font-size: 16px;
+    color: white;
     transition: background-color 0.3s, border-color 0.3s, color 0.3s;
   }
 
@@ -22,21 +26,19 @@
     background-color: rgba(65, 190, 161, 0.281);
     border-color:#94dfcf;
   }
-
-  input:focus {
-    color: white;
-  }
-
+  
   button {
     height: 50px;
-    color: white;
-    cursor: pointer;
+    padding-top: 4px;
+    padding-right: 13px;
+    padding-left: 10px;
     background-color: rgba(65, 190, 161, 0.521);
     border-radius: 8px;
     border: 3px solid #59c0aa;
-    padding-right: 13px;
-    padding-left: 10px;
+    font-family: 'Gothic A1', sans-serif;
     font-size: 20px;
+    color: white;
+    cursor: pointer;
     transition: background-color 0.3s, border-color 0.3s;
   }
 
@@ -44,3 +46,20 @@
     background-color: rgba(65, 190, 161, 0.308);
     border-color: #59c0aa;
   }
+
+
+
+@media (max-width: 720px) {
+  form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 320px;
+    height: 50px;
+    margin-bottom: -25px;
+  }
+
+  input {
+    width: 240px;
+  }
+}

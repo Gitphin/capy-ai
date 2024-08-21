@@ -1,19 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Gothic+A1:wght@700&display=swap");
+
 html, body {
   margin: 0;
   padding: 0;
   overflow: hidden;
+  background-color:#202020;
 }
 
 #root {
   width: 100vw;
   height: 100vh;
-}
-
-canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #101010; /* Set background color */
 }

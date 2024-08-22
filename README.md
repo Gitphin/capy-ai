@@ -1,12 +1,12 @@
 ## TODO FOR CAPY AI:
 
-1. Add in generated text output
+1. ~~Add in generated text output~~
 
 2. ~~Add credits to README~~
 
-3. Add a capybara logo for text (w/ animation?)
+3. ~~Add a capybara logo for text (w/ animation?)~~
 
-4. Hook up to OpenAI API
+4. ~~Hook up to OpenAI API (Now using Groq API)~~
 
 5. Set up a backend / store local user's chat logs / add a loading screen to generated text
 

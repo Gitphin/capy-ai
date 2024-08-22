@@ -4,12 +4,15 @@ import styles from './textinput.module.css';
 function TextInput({ onSubmit }) {
   const [value, setValue] = useState('');
 
-  const handleChange = (event) => {
+  const handle_change = (event) => {
     setValue(event.target.value);
   };
-
-  const handleSubmit = (event) => {
+  const handle_submit = (event) => {
     event.preventDefault();
+    if (value.trim() === '') {
+      console.error('Error: Cannot submit empty text');
+      return;
+    }
     if (onSubmit) {
       onSubmit(value);
     }
@@ -17,15 +20,21 @@ function TextInput({ onSubmit }) {
   };
 
   return (
-    <form onSubmit={handleSubmit} className={styles.textInputContainer}>
+    <form onSubmit={handle_submit} className={styles.textInputContainer}>
       <input
         type="text"
         value={value}
-        onChange={handleChange}
+        onChange={handle_change}
         placeholder="Talk to the capybara..."
         className={styles.textInput}
       />
-      <button type="submit" className={styles.submitButton}>OK</button>
+      <button
+        type="submit"
+        className={styles.submitButton}
+        disabled={value.trim() === ''}
+      >
+        OK
+      </button>
     </form>
   );
 }

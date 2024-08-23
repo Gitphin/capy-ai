@@ -19,9 +19,11 @@
 
 3. ~~Color/BG changing?~~
 
-4. Store chat history per user instead 
+4. Store chat history per user instead
 
 5. Be able to change the capybara's mood (click on icon)
+
+6. Deploy app.py on Heroku?
 
 
 

@@ -7,7 +7,7 @@
     width: 100%;
     gap: 10px;
   }
-  
+
   input {
     padding: 8px;
     width: 550px;
@@ -24,9 +24,9 @@
 
   input:hover {
     background-color: rgba(65, 190, 161, 0.281);
-    border-color:#94dfcf;
+    border-color: #94dfcf;
   }
-  
+
   button {
     height: 50px;
     padding-top: 4px;
@@ -53,27 +53,27 @@
     top: -20px;
     left: -64px;
     opacity: 50%;
-}
-
-
-
-@media (max-width: 720px) {
-  form {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 320px;
-    height: 50px;
-    margin-bottom: -25px;
-    margin-left: 40px;
   }
 
-  input {
-    width: 240px;
-  }
 
-  .git {
-    left: -30px;
-    top: -8px;
+
+  @media (max-width: 720px) {
+    form {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 320px;
+      height: 50px;
+      margin-bottom: -25px;
+      margin-left: 40px;
+    }
+
+    input {
+      width: 240px;
+    }
+
+    .git {
+      left: -30px;
+      top: -8px;
+    }
   }
-}

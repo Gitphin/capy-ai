@@ -71,42 +71,42 @@ function App() {
         <TextInput onSubmit={handle_text_submit} />
       </div>
       <sliders>
-  <label>
-    R:
-    <input
-      type="range"
-      min="0"
-      max="255"
-      value={r}
-      onChange={(e) => setR(e.target.value)}
-    />
-    {r}
-  </label>
-  <br />
-  <label>
-    G:
-    <input
-      type="range"
-      min="0"
-      max="255"
-      value={g}
-      onChange={(e) => setG(e.target.value)}
-    />
-    {g}
-  </label>
-  <br />
-  <label>
-    B:
-    <input
-      type="range"
-      min="0"
-      max="255"
-      value={b}
-      onChange={(e) => setB(e.target.value)}
-    />
-    {b}
-  </label>
-</sliders>
+        <label>
+          R:
+          <input
+            type="range"
+            min="0"
+            max="255"
+            value={r}
+            onChange={(e) => setR(e.target.value)}
+          />
+          {r}
+        </label>
+        <br />
+        <label>
+          G:
+          <input
+            type="range"
+            min="0"
+            max="255"
+            value={g}
+            onChange={(e) => setG(e.target.value)}
+          />
+          {g}
+        </label>
+        <br />
+        <label>
+          B:
+          <input
+            type="range"
+            min="0"
+            max="255"
+            value={b}
+            onChange={(e) => setB(e.target.value)}
+          />
+          {b}
+        </label>
+      </sliders>
 
     </>
   );

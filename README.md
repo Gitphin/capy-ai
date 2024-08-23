@@ -8,18 +8,23 @@
 
 4. ~~Hook up to OpenAI API (Now using Groq API)~~
 
-5. Set up a backend / store local user's chat logs / add a loading screen to generated text
+5. ~~Store user's input to create a chat history~~
 
 
 ## LATER FEATURES:
 
-1. Add a help/contact button
+1. ~~Add a GitHub button~~
 
-2. Add a chat log or previous dialogue button?
+2. ~~Capybara icon changing / animation?~~
 
-3. Color/BG changing?
+3. ~~Color/BG changing?~~
 
-4. Animations?
+4. Be able to change the capybara's mood (click on icon)
+
+5. Set up a backend to restore previous chats
+
+5. (Pt.2) Add a chat-log template
+
 
 
 ## MODELS USED:
@@ -35,3 +40,6 @@
 "Duck" (https://skfb.ly/otTYs) by AIUM2 is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
 
 "Turtle By RISD Naturelab - optimised" (https://skfb.ly/o6vKH) by Thomas Flynn is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+
+
+Capybara Icon - https://www.flaticon.com/free-icons/capybara

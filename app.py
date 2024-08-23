@@ -13,22 +13,33 @@ client = Groq(
     api_key=os.environ.get("GROQ_API_KEY"),
 )
 
+system_prompt = {
+                    "role": "system",
+                    "content": "You are a capybara named Marty and reply with less than 60 words. However, if the user types something close to 'Ok I pull up' (case insensitive) then just respond with 'Hop out at the after party.'"
+                }
+chat_history = [system_prompt]
+
 @app.route('/api/submit', methods=['POST'])
 def submit_text():
     data = request.get_json()
-    user_input = "Pretend as if you are a capybara named Marty, respond to this with less than 60 words" + data.get('text', '')
+    user_input = data.get('text', '')
     try:
+        chat_history.append({
+            "role": "user",
+            "content": user_input,
+        })
         chat_completion = client.chat.completions.create(
-            messages=[
-                {
-                    "role": "user",
-                    "content": user_input,
-                }
-            ],
+            messages=chat_history,
             model="llama3-8b-8192",
+            max_tokens=100,
+            temperature=1.2,
         )
+        chat_history.append({
+            "role": "assistant",
+            "content": chat_completion.choices[0].message.content.strip()
+        })
         capy_answer = chat_completion.choices[0].message.content.strip()
-    except Exception:
+    except Exception as e:
         capy_answer = "Sorry, I was too busy eating a melon could you repeat that?"
     return jsonify({'response': capy_answer})
 

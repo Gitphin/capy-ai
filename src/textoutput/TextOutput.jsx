@@ -4,9 +4,9 @@ import capy from "../../capyicon.png";
 
 export const TextOutput = ({ text }) => {
   return (
-    <section>
-      <img src={capy} alt="Capybara" />
-      <text>{text}</text>
+    <section className={styles.section}>
+      <div className={styles.static}><img src={capy} alt="Capybara" /></div>
+      <p className={styles.text}>{text}</p>
     </section>
   );
 };

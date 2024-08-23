@@ -1,9 +1,12 @@
 {
     "version": 2,
     "builds": [
-        {"src": "app.py", "use": "@vercel/python"}
+      { "src": "vite.config.js", "use": "@vercel/static-build", "config": { "distDir": "dist" } },
+      { "src": "api.py", "use": "@vercel/python" }
     ],
     "routes": [
-        {"src": "/(.*)", "dest": "app.py"}
+      { "src": "/api/(.*)", "dest": "/api.py" },
+      { "src": "/(.*)", "dest": "/index.html" }
     ]
-}
+  }
+  

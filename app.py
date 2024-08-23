@@ -44,7 +44,6 @@ def submit_text():
                 "content": chat_completion.choices[0].message.content.strip(),
             }
         )
-        chat_history = chat_history[-16:]
         capy_answer = chat_completion.choices[0].message.content.strip()
     except Exception as e:
         capy_answer = "Sorry, I was too busy eating a melon could you repeat that?"
@@ -52,4 +51,4 @@ def submit_text():
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", debug=True)
+    app.run(debug=True)

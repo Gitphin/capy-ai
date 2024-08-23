@@ -4,7 +4,6 @@ from dotenv import load_dotenv
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 from groq import Groq
-from waitress import serve
 
 load_dotenv()
 
@@ -52,4 +51,4 @@ def submit_text():
 
 
 if __name__ == "__main__":
-    serve(app, host="0.0.0.0", port=8000)
+    app.run(debug=True)

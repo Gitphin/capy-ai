@@ -26,7 +26,7 @@ function App() {
     set_is_typing(true);
     try {
       await new Promise(resolve => setTimeout(resolve, 250));
-      const response = await axios.post('http://localhost:8000/api/submit', {
+      const response = await axios.post('http://localhost:5000/api/submit', {
         text: new_text
       });
       if (response.status !== 200) {
@@ -70,7 +70,12 @@ function App() {
       }}>
         <TextInput onSubmit={handle_text_submit} />
       </div>
-      <sliders>
+      <sliders style={{
+        position: 'fixed',
+        top: '200px',
+        left: '50%',
+        transform: 'translateX(-50%)',
+      }}>
         <label>
           R:
           <input
@@ -107,7 +112,6 @@ function App() {
           {b}
         </label>
       </sliders>
-
     </>
   );
 }

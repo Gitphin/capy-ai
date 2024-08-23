@@ -19,11 +19,9 @@
 
 3. ~~Color/BG changing?~~
 
-4. Be able to change the capybara's mood (click on icon)
+4. Store chat history per user instead 
 
-5. Set up a backend to restore previous chats
-
-5. (Pt.2) Add a chat-log template
+5. Be able to change the capybara's mood (click on icon)
 
 
 

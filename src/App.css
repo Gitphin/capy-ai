@@ -28,7 +28,7 @@ body {
   gap: 20px;
   width: 670px;
   position: absolute;
-  bottom: 380px;
+  bottom: 420px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
@@ -43,10 +43,10 @@ body {
 
 @media (max-width: 720px) {
   .sliders {
-    width: 330px;
-    height: 60px;
-    margin-top: 60px;
-    padding-top: 0px;
+    width: 375px;
+    height: 70px;
+    bottom: 350px;
+    margin-top: 80px;
     flex-direction: row;
     gap: 5px;
     font-size: 14pt;
@@ -56,6 +56,5 @@ body {
     width: 50px;
     padding-top: 0px;
     margin-top: 0px;
-    
   }
 }

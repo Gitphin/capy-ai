@@ -6,21 +6,21 @@ import TextOutput from './textoutput/TextOutput';
 import { Canvas } from "@react-three/fiber";
 import { useGLTF, PresentationControls, Stage } from "@react-three/drei";
 
-function generateUUID() {
-  return self.crypto.randomUUID();
-}
-
 function Model(props) {
   const { scene } = useGLTF("/capyai3.glb");
   return <primitive object={scene} {...props} />;
 }
 
+function generateUUID() {
+  return self.crypto.randomUUID();
+}
+
 function App() {
   const [text, set_text] = useState('Hello, my name is Marty and I am a capybara!');
   const [is_typing, set_is_typing] = useState(false);
-  const [r, setR] = useState(32);
-  const [g, setG] = useState(32);
-  const [b, setB] = useState(32);
+  const [r, set_r] = useState(32);
+  const [g, set_g] = useState(32);
+  const [b, set_b] = useState(32);
 
   useEffect(() => {
     document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
@@ -30,19 +30,24 @@ function App() {
     set_is_typing(true);
     try {
       await new Promise(resolve => setTimeout(resolve, 250));
+
       let session_id = localStorage.getItem('session_id');
       if (!session_id) {
         session_id = generateUUID();
         localStorage.setItem('session_id', session_id);
       }
+
       const response = await axios.post('https://capy-back.vercel.app/api/submit', {
         text: new_text,
         session_id: session_id
       });
+
       if (response.status !== 200) {
         throw new Error('Network response invalid');
       }
+
       set_text(response.data.response);
+   
     } catch (error) {
       console.error('Error:', error);
     } finally {
@@ -88,7 +93,7 @@ function App() {
             min="0"
             max="255"
             value={r}
-            onChange={(e) => setR(e.target.value)}
+            onChange={(e) => set_r(e.target.value)}
           />
           {r}
         </label>
@@ -100,7 +105,7 @@ function App() {
             min="0"
             max="255"
             value={g}
-            onChange={(e) => setG(e.target.value)}
+            onChange={(e) => set_g(e.target.value)}
           />
           {g}
         </label>
@@ -112,15 +117,13 @@ function App() {
             min="0"
             max="255"
             value={b}
-            onChange={(e) => setB(e.target.value)}
+            onChange={(e) => set_b(e.target.value)}
           />
           {b}
         </label>
-        </div>
+      </div>
     </>
   );
 }
 
 export default App;
-
-

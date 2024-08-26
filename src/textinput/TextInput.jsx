@@ -22,8 +22,8 @@ function TextInput({ onSubmit }) {
 
   return (
     <>
-      <a href="https://github.com/Gitphin/capy-ai"><img className={styles.git} src={git}></img></a>
       <form onSubmit={handle_submit} className={styles.textInputContainer}>
+        <a href="https://github.com/Gitphin/capy-ai"><img className={styles.git} src={git}></img></a>
         <input
           type="text"
           value={value}

@@ -4,7 +4,6 @@
     justify-content: center;
     align-items: center;
     height: 0px;
-    width: 100%;
     gap: 10px;
   }
 
@@ -12,7 +11,7 @@
     padding: 8px;
     width: 600px;
     height: 30px;
-    margin-left: 60px;
+    margin-left: -60px;
     border-radius: 8px;
     background-color: rgba(65, 190, 161, 0.521);
     border: 3px solid #59c0aa;
@@ -50,9 +49,8 @@
 
   .git {
     width: 46px;
-    position: absolute;
-    top: -43px;
-    left: -16px;
+    margin-bottom: 20px;
+    margin-right: 60px;
     opacity: 70%;
   }
 
@@ -63,19 +61,18 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      margin-right: 20px;
       width: 320px;
       height: 50px;
       margin-bottom: -25px;
-      margin-left: 30px;
     }
 
     input {
-      width: 250px;
-      margin-left: 20px;
+      width: 300px;
+
     }
 
     .git {
-      left: -24px;
-      top: -15px;
+      margin-top: 20px;
     }
   }

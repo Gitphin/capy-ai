@@ -26,26 +26,30 @@ body {
   font-family: 'Gothic A1', sans-serif;
   font-size: 14pt;
   gap: 20px;
+  height: 60px;
   width: 670px;
   position: absolute;
-  bottom: 420px;
+  bottom: 340px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
+  transition: border-color 0.3s;
+}
+
+.sliders:hover {
+  border-color: #94dfcf;
 }
 
 
 .sliders input {
-  width: 100px;
-  gap: 200px;
-
+  width: 60px;
 }
 
 @media (max-width: 720px) {
   .sliders {
     width: 375px;
-    height: 70px;
-    bottom: 350px;
+    height: 55px;
+    bottom: 280px;
     margin-top: 80px;
     flex-direction: row;
     gap: 5px;
@@ -53,8 +57,9 @@ body {
   }
 
   .sliders input {
-    width: 50px;
+    width: 36px;
     padding-top: 0px;
     margin-top: 0px;
+    margin-left: 5px;
   }
 }

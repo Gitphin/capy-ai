@@ -16,7 +16,8 @@ function generateUUID() {
 }
 
 function App() {
-  const [text, set_text] = useState('Hello, my name is Marty and I am a capybara!');
+  const [usertext, set_usertext] = useState('');
+  const [text, set_responsetext] = useState('Hello, my name is Marty and I am a capybara!');
   const [is_typing, set_is_typing] = useState(false);
   const [r, set_r] = useState(32);
   const [g, set_g] = useState(32);
@@ -27,7 +28,9 @@ function App() {
   }, [r, g, b]);
 
   const handle_text_submit = async (new_text) => {
+    set_usertext(new_text);
     set_is_typing(true);
+
     try {
       await new Promise(resolve => setTimeout(resolve, 250));
 
@@ -46,10 +49,11 @@ function App() {
         throw new Error('Network response invalid');
       }
 
-      set_text(response.data.response);
+      set_responsetext(response.data.response);
    
     } catch (error) {
       console.error('Error:', error);
+      set_responsetext('Error occurred, please try again.');
     } finally {
       set_is_typing(false);
     }
@@ -57,16 +61,16 @@ function App() {
 
   return (
     <>
-      <TextOutput text={is_typing ? '...' : text} />
+      <TextOutput usertext={usertext} text={is_typing ? '...' : text} />
       <Canvas
         dpr={[1, 2]}
         shadows
-        camera={{ fov: 60, position: [50, 100, 700] }}
+        camera={{ fov: 60, position: [80, 100, 700] }}
         style={{
           top: 0,
           left: 0,
           width: "100vw",
-          height: "100vh",
+          height: "70vh",
           overflow: "hidden",
         }}
       >

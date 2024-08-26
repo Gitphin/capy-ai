@@ -23,7 +23,7 @@
 
 5. Be able to change the capybara's mood (click on icon)
 
-6. Deploy app.py on Heroku?
+6. ~~Deploy app.py on Heroku? (Worked with Vercel finally)~~
 
 
 

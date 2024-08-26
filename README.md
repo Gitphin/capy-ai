@@ -1,3 +1,5 @@
+# https://capy-ai.vercel.app/
+
 ## TODO FOR CAPY AI:
 
 1. ~~Add in generated text output~~
@@ -19,11 +21,25 @@
 
 3. ~~Color/BG changing?~~
 
-4. Store chat history per user instead
+4. Store chat history per user instead of sessions / clearing local history
 
 5. Be able to change the capybara's mood (click on icon)
 
 6. ~~Deploy app.py on Heroku? (Worked with Vercel finally)~~
+
+7. Allow user to clear history of chatbot/start new conversations
+
+8. Template for previous chats, ability to load them / preview them again
+
+## MUCH LAYER FEATURES:
+
+1. Animations
+
+2. Image generation
+
+3. Emotes/Movement interactions
+
+4. Completely reworked 3D Scene,  movement rework, different animals to talk to w/ different interactions
 
 
 

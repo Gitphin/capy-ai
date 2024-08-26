@@ -36,9 +36,9 @@
 
 ## MUCH LATER FEATURES:
 
-1. Create backend to store previous sessions
+1. Create backend to store previous sessions (or do from localStorage)
 
-2. Ability to load previous chat sessions
+2. Ability to load previous chat sessions / background colors
 
 3. Create template to display full chat histories
 

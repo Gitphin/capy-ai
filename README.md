@@ -13,6 +13,7 @@
 5. ~~Store user's input to create a chat history~~
 
 
+
 ## LATER FEATURES:
 
 1. ~~Add a GitHub button~~
@@ -21,15 +22,17 @@
 
 3. ~~Color/BG changing?~~
 
-4. Store chat history per user instead of sessions / clearing local history
+4. ~~Store chat history within sessions~~
 
-5. Be able to change the capybara's mood (click on icon)
+5. ~~Be able to change the capybara's mood (Backlogged)~~
 
 6. ~~Deploy app.py on Heroku? (Worked with Vercel finally)~~
 
-7. Allow user to clear history of chatbot/start new conversations
+7. ~~Allow user to clear history of chatbot/start new conversations (Done with sessions, need to expand later)~~
 
 8. Template for previous chats, ability to load them / preview them again
+
+
 
 ## MUCH LATER FEATURES:
 

@@ -70,12 +70,7 @@ function App() {
       }}>
         <TextInput onSubmit={handle_text_submit} />
       </div>
-      <sliders style={{
-        position: 'fixed',
-        top: '200px',
-        left: '50%',
-        transform: 'translateX(-50%)',
-      }}>
+      <div className="sliders">
         <label>
           R:
           <input
@@ -111,7 +106,7 @@ function App() {
           />
           {b}
         </label>
-      </sliders>
+        </div>
     </>
   );
 }

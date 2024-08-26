@@ -31,10 +31,10 @@ function App() {
     try {
       await new Promise(resolve => setTimeout(resolve, 250));
 
-      let session_id = localStorage.getItem('session_id');
+      let session_id = sessionStorage.getItem('session_id');
       if (!session_id) {
         session_id = generateUUID();
-        localStorage.setItem('session_id', session_id);
+        sessionStorage.setItem('session_id', session_id);
       }
 
       const response = await axios.post('https://capy-back.vercel.app/api/submit', {

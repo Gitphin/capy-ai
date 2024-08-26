@@ -30,19 +30,27 @@
 
 7. ~~Allow user to clear history of chatbot/start new conversations (Done with sessions, need to expand later)~~
 
-8. Template for previous chats, ability to load them / preview them again
+8. ~~Template for previous chats~~
 
 
 
 ## MUCH LATER FEATURES:
 
-1. Animations
+1. Create backend to store previous sessions
 
-2. Image / Voice generation
+2. Ability to load previous chat sessions
 
-3. Emotes/Movement interactions
+3. Create template to display full chat histories
 
-4. Completely reworked 3D Scene,  movement rework, different animals to talk to w/ different interactions
+4. Animations
+
+5. Image / Voice generation
+
+6. Emotes/Movement interactions
+
+7. Completely reworked 3D Scene, movement rework, different animals to talk to w/ different interactions
+
+8. Change domain name and prepare to launch
 
 
 

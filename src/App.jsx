@@ -26,7 +26,7 @@ function App() {
     set_is_typing(true);
     try {
       await new Promise(resolve => setTimeout(resolve, 250));
-      const response = await axios.post('https://flask-hello-world-zeta-wheat.vercel.app//api/submit', {
+      const response = await axios.post('https://flask-hello-world-zeta-wheat.vercel.app/api/submit', {
         text: new_text
       });
       if (response.status !== 200) {

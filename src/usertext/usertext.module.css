@@ -1,0 +1,51 @@
+.section {
+    display: flex;
+    align-items: center;
+    height: 200px;
+    justify-content: center;
+    margin: auto;
+    margin-top: 20px;
+    padding: 20px;
+    width: 650px;
+    height: 40px;
+    border-radius: 8px;
+    background-color: rgba(65, 190, 161, 0.521);
+    border: 3px solid #59c0aa;
+    color: white;
+    font-family: 'Gothic A1', sans-serif;
+    font-size: 14pt;
+    transition: border-color 0.3s;
+  }
+
+  .usertext {
+    font: 30pt;
+    border: 3px solid black;
+    border-radius: 8px;
+    width: 640px;
+    height: 40px;
+    background-color: rgba(244, 239, 239, 0.823);
+    white-space: normal;
+    overflow: hidden;
+    overflow-y: auto;
+    word-wrap: break-word;
+    padding: 10px;
+    color: black;
+    z-index: 20;
+  }
+
+  @media (max-width: 720px) {
+    .section {
+      padding: 15px;
+      margin-top: 10px;
+      height: 50px;
+      gap: 20px;
+      width: 364px;
+      font-size: 16px;
+    }
+
+    .usertext {
+        width: 360px;
+    }
+  }
+  
+  

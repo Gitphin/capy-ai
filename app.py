@@ -8,18 +8,13 @@ load_dotenv()
 
 app = Flask(__name__)
 CORS(app)
-
-client = Groq(
-    api_key=os.environ.get("GROQ_API_KEY"),
-)
-
+client = Groq(api_key=os.environ.get("GROQ_API_KEY"))
 system_prompt = {
     "role": "system",
     "content": "You are a capybara named Marty and reply with less than 60 words. However, if the user types something close to 'Ok I pull up' (case insensitive) then just respond with 'Hop out at the after party.'",
 }
 
 chat_histories = {}
-
 
 @app.route("/api/submit", methods=["POST"])
 def submit_text():
@@ -28,10 +23,11 @@ def submit_text():
     session_id = data.get("session_id", "")
     
     if not session_id:
-        return jsonify({"response": "Invalid session ID"}), 400
+        return jsonify({"response": "Invalid session"}), 400
 
     if session_id not in chat_histories:
         chat_histories[session_id] = [system_prompt]
+
     try:
         chat_histories[session_id].append(
             {
@@ -52,11 +48,10 @@ def submit_text():
             }
         )
         capy_answer = chat_completion.choices[0].message.content.strip()
-    except Exception as e:
+    except Exception:
         capy_answer = "Sorry, I was too busy eating a melon could you repeat that?"
     
     return jsonify({"response": capy_answer})
-
 
 if __name__ == "__main__":
     app.run(debug=True)

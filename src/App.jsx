@@ -26,7 +26,7 @@ function App() {
     set_is_typing(true);
     try {
       await new Promise(resolve => setTimeout(resolve, 250));
-      const response = await axios.post('http://localhost:5000/api/submit', {
+      const response = await axios.post('https://flask-hello-world-4xynr18bj-gitphins-projects.vercel.app/api/submit', {
         text: new_text
       });
       if (response.status !== 200) {

@@ -6,6 +6,10 @@ import TextOutput from './textoutput/TextOutput';
 import { Canvas } from "@react-three/fiber";
 import { useGLTF, PresentationControls, Stage } from "@react-three/drei";
 
+function generateUUID() {
+  return self.crypto.randomUUID();
+}
+
 function Model(props) {
   const { scene } = useGLTF("/capyai3.glb");
   return <primitive object={scene} {...props} />;
@@ -26,8 +30,14 @@ function App() {
     set_is_typing(true);
     try {
       await new Promise(resolve => setTimeout(resolve, 250));
+      let session_id = localStorage.getItem('session_id');
+      if (!session_id) {
+        session_id = generateUUID();
+        localStorage.setItem('session_id', session_id);
+      }
       const response = await axios.post('https://capy-back.vercel.app/api/submit', {
-        text: new_text
+        text: new_text,
+        session_id: session_id
       });
       if (response.status !== 200) {
         throw new Error('Network response invalid');

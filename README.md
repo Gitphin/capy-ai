@@ -31,11 +31,11 @@
 
 8. Template for previous chats, ability to load them / preview them again
 
-## MUCH LAYER FEATURES:
+## MUCH LATER FEATURES:
 
 1. Animations
 
-2. Image generation
+2. Image / Voice generation
 
 3. Emotes/Movement interactions
 

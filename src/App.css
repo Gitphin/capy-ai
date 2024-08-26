@@ -25,11 +25,11 @@ body {
   color: white;
   font-family: 'Gothic A1', sans-serif;
   font-size: 14pt;
-  gap: 20px;
+  gap: 60px;
   height: 70px;
-  width: 630px;
+  width: 670px;
   position: absolute;
-  bottom: 310px;
+  bottom: 320px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;

@@ -1,10 +1,10 @@
 .section {
   display: flex;
   align-items: center;
-  height: 240px;
+  height: 120px;
   justify-content: flex-start;
   margin: auto;
-  margin-top: 20px;
+  margin-top: 8px;
   padding: 20px;
   width: 650px;
   border-radius: 8px;
@@ -32,16 +32,16 @@ img {
 .text {
   padding: 10px;
   padding-left: 20px;
-  margin-left: 10px;
-  margin-bottom: 130px;
+  margin-left: 20px;
+  margin-bottom: 20px;
   border-radius: 8px;
-  border: 3px solid #59c0aa;
+  border: 2px solid black;
   background-color: #59c0aa;
   white-space: normal;
   overflow: hidden;
   overflow-y: auto;
   word-wrap: break-word;
-  height: calc(50%);
+  height: calc(90%);
   width: calc(90%);
   transition: opacity 0.3s;
 }
@@ -83,7 +83,7 @@ img {
   .section {
     padding: 10px;
     padding-right: 20px;
-    margin-top: 10px;
+    margin-top: 8px;
     height: 160px;
     gap: 20px;
     width: 364px;
@@ -91,7 +91,7 @@ img {
   }
 
   img {
-    margin-left: 16px;
+    margin-left: 15px;
     margin-top: 15px;
     padding-left: -20px;
     padding-right: -20px;
@@ -99,11 +99,11 @@ img {
   }
 
   .text {
-    margin-top: 140px;
+    margin-top: 20px;
     height: 120px;
     width: 360px;
     padding-right: -20px;
-    padding-left: -20px;
+    padding-left: 0px;
     padding: 10px;
   }
 

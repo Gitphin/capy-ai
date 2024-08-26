@@ -1,5 +1,6 @@
 .section {
     display: flex;
+    flex-direction: row;
     align-items: center;
     height: 200px;
     justify-content: center;
@@ -17,21 +18,35 @@
     transition: border-color 0.3s;
   }
 
+  .section:hover {
+    border-color: #94dfcf;
+  }
+
+  h2 {
+    padding-right: 20px;
+  }
+
   .usertext {
     font: 30pt;
-    border: 3px solid black;
+    border: 2px solid black;
     border-radius: 8px;
     width: 640px;
     height: 40px;
-    background-color: rgba(244, 239, 239, 0.823);
+    background-color: #59c0aa;
     white-space: normal;
     overflow: hidden;
     overflow-y: auto;
     word-wrap: break-word;
     padding: 10px;
-    color: black;
+    color: rgb(255, 255, 255);
     z-index: 20;
+    transition: opacity 0.3s;
   }
+
+  .usertext:hover {
+    opacity: 80%;
+  }
+  
 
   @media (max-width: 720px) {
     .section {
@@ -45,6 +60,10 @@
 
     .usertext {
         width: 360px;
+    }
+
+    h2 {
+      padding-right: 0px;
     }
   }
   

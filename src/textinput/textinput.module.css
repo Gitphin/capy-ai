@@ -56,7 +56,7 @@
 
 
 
-  @media (max-width: 720px) {
+  @media (max-width: 750px) {
     form {
       display: flex;
       align-items: center;

@@ -17,7 +17,8 @@ body {
 .sliders {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
   border: 3px solid #59c0aa;
   border-radius: 8px;
   background-color: rgba(65, 190, 161, 0.521);
@@ -25,11 +26,11 @@ body {
   color: white;
   font-family: 'Gothic A1', sans-serif;
   font-size: 14pt;
-  gap: 60px;
-  height: 70px;
-  width: 670px;
+  gap: 20px;
+  width: 90%; 
+  max-width: 670px;
   position: absolute;
-  bottom: 320px;
+  bottom: 10%;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
@@ -40,17 +41,16 @@ body {
   border-color: #94dfcf;
 }
 
-
 .sliders input {
-  width: 60px;
+  width: 100%;
+  max-width: 60px;
 }
 
-@media (max-width: 720px) {
+
+@media (max-width: 750px) {
   .sliders {
     width: 375px;
     height: 55px;
-    bottom: 320px;
-    margin-top: 80px;
     flex-direction: row;
     gap: 5px;
     font-size: 14pt;
